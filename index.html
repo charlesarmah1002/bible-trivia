@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know Your Bible Characters</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- remixicons -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <div id="container">
+        <div class="time-and-score">
+            <p class="time">Seconds left: <br><span id="timeLeft">30</span></p>
+            <p class="score">Your score: <br> <span id="score">05</span></p>
+        </div>
+        <h1>Know Your Bible Characters</h1>
+        <div id="hint">
+            <p>The second king of Israel and the author of the Psalms</p>
+        </div>
+        <div class="inputFields">
+            <input type="text" name="" id="" class="input" disabled>
+            <input type="text" name="" id="" class="input" disabled>
+            <input type="text" name="" id="" class="input" disabled>
+            <input type="text" name="" id="" class="input" disabled>
+            <input type="text" name="" id="" class="input" disabled>
+        </div>
+        <input type="text" id="actualInput">
+        <p class="guesses"><span id="guessesLeft">7</span> guesses left</p>
+        <div class="actions">
+            <button id="restart">
+                <i class="ri-restart-line"></i>
+                <span>Restart</span>
+            </button>
+            <button id="start">
+                <i class="ri-play-fill"></i>
+                <span>Start</span>
+            </button>
+            <button id="stop">
+                <i class="ri-stop-circle-line"></i>
+                <span>Quit</span>
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
