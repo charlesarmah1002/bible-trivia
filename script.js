@@ -8,13 +8,59 @@ const questions = [
         hint: "Promiscuous king whose son became the wisest and richest on earth"
     },
     {
-        name: "wesley",
-        hint: "The name of the brothers who founded the Methodist Church"
+        name: "moses",
+        hint: "Led the Israelites out of Egypt and received the Ten Commandments.",
+        scripture: "Exodus 3:10-12"
+    },
+    {
+        name: "david",
+        hint: "Shepherd boy who became a king, known for defeating Goliath.",
+        scripture: "1 Samuel 17:45-50"
+    },
+    {
+        name: "paul",
+        hint: "Apostle who wrote many of the New Testament letters and spread Christianity to the Gentiles.",
+        scripture: "Acts 9:1-19"
+    },
+    {
+        name: "ruth",
+        hint: "Moabite woman who showed great loyalty to her mother-in-law Naomi and became an ancestor of David.",
+        scripture: "Ruth 1:16-17"
+    },
+    {
+        name: "elijah",
+        hint: "Prophet who challenged the prophets of Baal and was taken up to heaven in a whirlwind.",
+        scripture: "1 Kings 18:36-39"
+    },
+    {
+        name: "daniel",
+        hint: "Survived the lion's den because of his faithfulness to God.",
+        scripture: "Daniel 6:16-23"
+    },
+    {
+        name: "esther",
+        hint: "Jewish queen who saved her people from destruction.",
+        scripture: "Esther 4:14-16"
+    },
+    {
+        name: "peter",
+        hint: "Disciple who denied Jesus three times but later became a key leader in the early church.",
+        scripture: "Matthew 26:69-75"
+    },
+    {
+        name: "noah",
+        hint: "Built an ark to save his family and animals from the flood.",
+        scripture: "Genesis 6:13-22"
+    },
+    {
+        name: "joseph",
+        hint: "Sold into slavery by his brothers but rose to become a powerful leader in Egypt.",
+        scripture: "Genesis 37:3-4, 50:20"
     }
 ];
 
 let answerVal = "";
-let timeRemaining = 10;
+let timeRemaining = 120;
 let characterName;
 let fields = "";
 let score = 0;
@@ -88,7 +134,7 @@ function nextQuestion() {
         actualInpt.disabled = true;
         return;
     }
-    
+
     const randomIndex = Math.floor(Math.random() * questions.length);
     const randomQuestion = questions.splice(randomIndex, 1)[0];
 
