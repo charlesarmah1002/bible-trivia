@@ -13,58 +13,65 @@
     user-select: none;
 }
 
-body {
-    background: var(--green);
-    display: grid;
-    place-content: center;
-    height: 100svh;
-}
+@media screen and (min-width : 571px) {
+    body {
+        background: var(--green);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        place-content: center;
+        height: 100svh;
+    }
 
-#container {
-    padding: 25px 35px;
-    background: var(--white);
-    border-radius: 10px;
-    text-align: center;
-    font-size: 18px;
-    display: grid;
-    gap: 20px;
-}
+    #container {
+        padding: 25px 35px;
+        background: var(--white);
+        border-radius: 10px;
+        text-align: center;
+        font-size: 18px;
+        display: grid;
+        place-content: center;
+        height: 500px;
+        gap: 20px;
+    }
 
-#container .time-and-score {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+    #container .time-and-score {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 
-#container #timeLeft,
-#container #score {
-    font-size: 64px;
-    line-height: 64px;
-    font-weight: 600;
-    display: grid;
-    place-content: center;
-}
+    #container #timeLeft,
+    #container #score {
+        font-size: 64px;
+        line-height: 64px;
+        font-weight: 600;
+        display: grid;
+        place-content: center;
+    }
 
-#container h1 {
-    font-size: 32px;
-}
+    #container h1 {
+        font-size: 32px;
+    }
 
-#container .hint {
-    background: var(--red);
-    width: 450px;
-    color: var(--white);
-    min-height: 100px;
-    border-radius: 5px;
-    display: grid;
-    place-items: center;
-    margin-inline: auto;
-}
+    #container .hint {
+        background: var(--red);
+        width: 450px;
+        color: var(--white);
+        min-height: 100px;
+        border-radius: 5px;
+        display: grid;
+        place-items: center;
+        margin-inline: auto;
+    }
 
-#container .inputFields {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    gap: 15px;
+    #container .inputFields {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        gap: 15px;
+    }
+
 }
 
 #container .inputFields input {
@@ -102,6 +109,7 @@ body {
     align-items: center;
     justify-content: center;
     align-content: center;
+    flex-wrap: wrap;
     gap: 20px;
     font-size: 24px;
 }
@@ -140,4 +148,61 @@ button#start {
     z-index: -999;
     position: absolute;
     pointer-events: none;
+}
+
+@media screen and (max-width:570px) {
+    body {
+        background: var(--green);
+        height: 100svh;
+        display: grid;
+        place-content: center;
+        text-align: center;
+        color: var(--white);
+    }
+
+    #container {
+        display: grid;
+        place-content: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 500px;
+        padding-inline: 20px;
+    }
+
+    .time-and-score {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .time-and-score > * {
+        background: var(--white);
+        padding: 10px;
+        color: black;
+        border-radius: 5px;
+        box-shadow: 4px 4px 10px 0px #00000040;
+    }
+
+    .time-and-score > * span {
+        font-weight: 600;
+    }
+
+    #container .inputFields {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    #container .inputFields input {
+        border: 0.5px solid white;
+        color: white;
+    }
+
+    button#start {
+        color: var(--green);
+        background: var(--white);
+    }
 }

@@ -32,18 +32,18 @@
         <input type="text" name="actualInput" id="actualInput" disabled>
         <!-- <p class="guesses"><span id="guessesLeft">7</span> guesses left</p> -->
         <div class="actions">
-            <!-- <button id="restart" onclick="countDown(10)">
-                <i class="ri-restart-line"></i>
-                <span>Restart</span>
-            </button> -->
             <button id="start" onclick="startQuiz()">
                 <i class="ri-play-fill"></i>
                 <span>Ready</span>
             </button>
-            <!-- <button id="stop">
+            <button id="restart" onclick="restartQuiz()">
+                <i class="ri-restart-line"></i>
+                <span>Restart</span>
+            </button>
+            <button id="stop" onclick="stopQuiz()">
                 <i class="ri-stop-circle-line"></i>
                 <span>Quit</span>
-            </button> -->
+            </button>
         </div>
     </div>
     <script src="script.js"></script>
