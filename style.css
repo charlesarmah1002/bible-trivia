@@ -1,8 +1,8 @@
 :root {
-    --green : #398f57;
-    --white : #f1f1f1;
-    --blue : #1F85FC;
-    --red : #F34D4D;
+    --green: #398f57;
+    --white: #f1f1f1;
+    --blue: #1F85FC;
+    --red: #F34D4D;
 }
 
 * {
@@ -48,8 +48,8 @@ body {
     font-size: 32px;
 }
 
-#container #hint {
-    background: var(--green);
+#container .hint {
+    background: var(--red);
     width: 450px;
     color: var(--white);
     min-height: 100px;
@@ -67,7 +67,7 @@ body {
     gap: 15px;
 }
 
-#container .inputFields .input {
+#container .inputFields input {
     width: 55px;
     height: 75px;
     background: none;
@@ -79,6 +79,18 @@ body {
     font-size: 24px;
     text-transform: capitalize;
     text-align: center;
+    transition: background 0.3s, color 0.35s;
+}
+
+#container .inputFields.success input {
+    background: var(--green);
+    color: var(--white);
+}
+
+#container .inputFields.error input {
+    background: var(--red);
+    color: var(--white);
+    border: var(--red) 0.5px solid;
 }
 
 #container .guesses #guessesLeft {
@@ -121,4 +133,11 @@ button#stop {
 
 button#start {
     background: var(--green);
+}
+
+#actualInput {
+    opacity: 0;
+    z-index: -999;
+    position: absolute;
+    pointer-events: none;
 }

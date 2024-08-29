@@ -19,31 +19,31 @@
 <body>
     <div id="container">
         <div class="time-and-score">
-            <p class="time">Seconds left: <br><span id="timeLeft">30</span></p>
-            <p class="score">Your score: <br> <span id="score">05</span></p>
+            <p class="time">Seconds left: <br><span id="timeLeft">0:00</span></p>
+            <p class="score">Your score: <br> <span id="score">0</span></p>
         </div>
         <h1>Know Your Bible Characters</h1>
-        <div id="hint">
-            <p>The second king of Israel and the author of the Psalms</p>
+        <div class="hint">
+            <p id="hint"></p>
         </div>
-        <div class="inputFields">
+        <label for="actualInput" class="inputFields">
             
-        </div>
-        <input type="text" id="actualInput">
-        <p class="guesses"><span id="guessesLeft">7</span> guesses left</p>
+        </label>
+        <input type="text" name="actualInput" id="actualInput" disabled>
+        <!-- <p class="guesses"><span id="guessesLeft">7</span> guesses left</p> -->
         <div class="actions">
-            <button id="restart">
+            <!-- <button id="restart" onclick="countDown(10)">
                 <i class="ri-restart-line"></i>
                 <span>Restart</span>
-            </button>
-            <button id="start">
+            </button> -->
+            <button id="start" onclick="startQuiz()">
                 <i class="ri-play-fill"></i>
-                <span>Start</span>
+                <span>Ready</span>
             </button>
-            <button id="stop">
+            <!-- <button id="stop">
                 <i class="ri-stop-circle-line"></i>
                 <span>Quit</span>
-            </button>
+            </button> -->
         </div>
     </div>
     <script src="script.js"></script>
