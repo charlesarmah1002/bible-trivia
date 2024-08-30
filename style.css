@@ -78,6 +78,10 @@
     position: relative;
 }
 
+#container .fieldsContainer {
+    position: relative;
+}
+
 #container .inputFields input {
     width: 55px;
     height: 75px;
@@ -155,6 +159,15 @@ button#start {
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
+}
+
+#container .fieldsContainer label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
 }
 
 @media screen and (max-width:570px) {

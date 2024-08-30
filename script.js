@@ -80,6 +80,7 @@ function setQuestion() {
     hintField.textContent = randomQuestion.hint;
     characterName = randomQuestion.name;
     actualInpt.maxLength = characterName.length;
+    actualInpt.focus = true;
 
     fields = "";
     inputFields.innerHTML = "";
