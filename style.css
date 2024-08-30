@@ -3,6 +3,7 @@
     --white: #f1f1f1;
     --blue: #1F85FC;
     --red: #F34D4D;
+    --yellow: #dfca91;
 }
 
 * {
@@ -15,7 +16,8 @@
 
 @media screen and (min-width : 571px) {
     body {
-        background: var(--green);
+        background: url(src/pattern%20background.jpg);
+        background-size: cover;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -25,7 +27,7 @@
 
     #container {
         padding: 25px 35px;
-        background: var(--white);
+        background: var(--yellow);
         border-radius: 10px;
         text-align: center;
         font-size: 18px;
@@ -33,6 +35,15 @@
         place-content: center;
         height: 500px;
         gap: 20px;
+        position: relative;
+        z-index: 3;
+        /* border: 1px solid black; */
+        box-shadow: 2px 2px 10px #00000040,
+                    10px 10px 0px var(--white),
+                    11px 11px 10px #00000040,
+                    20px 20px 0px var(--white),
+                    21px 21px 10px #00000040,
+                    30px 30px 0px var(--white);
     }
 
     #container .time-and-score {
@@ -152,7 +163,7 @@ button#start {
 }
 
 #actualInput {
-    opacity: 0; 
+    opacity: 0;
     z-index: -999;
     position: absolute;
     top: 80%;
@@ -172,21 +183,32 @@ button#start {
 
 @media screen and (max-width:570px) {
     body {
-        background: var(--green);
+        background: url(src/pattern\ background.jpg);
+        background-size: cover;
         height: 100svh;
         display: grid;
         place-content: center;
         text-align: center;
         color: var(--white);
+        padding: 25px;
     }
 
     #container {
+        /* margin: 10px; */
+        background: var(--yellow);
         display: grid;
         place-content: center;
         gap: 20px;
+        padding: 20px 15px;
         width: 100%;
         max-width: 500px;
         padding-inline: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px #00000040,
+                    7px 7px 0px var(--white),
+                    8px 8px 10px #00000040,
+                    14px 14px 0px var(--white),
+                    15px 15px 10px #00000040;
     }
 
     .time-and-score {
@@ -196,7 +218,7 @@ button#start {
         gap: 10px;
     }
 
-    .time-and-score > * {
+    .time-and-score>* {
         background: var(--white);
         padding: 10px;
         color: black;
@@ -204,7 +226,7 @@ button#start {
         box-shadow: 4px 4px 10px 0px #00000040;
     }
 
-    .time-and-score > * span {
+    .time-and-score>* span {
         font-weight: 600;
     }
 
