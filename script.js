@@ -53,7 +53,7 @@ const countDown = () => {
             clearInterval(countdownInterval);
             if (!inputFields.classList.contains("success")) {
                 inputFields.classList.add("error");
-                hintField.innerText = "Time up bruh"
+                hintField.innerText = "Time up bruh";
             }
             actualInpt.disabled = true;
         }
@@ -61,16 +61,15 @@ const countDown = () => {
 };
 
 const stopCountDown = () => {
-    console.log(timeRemaining)
-    clearInterval(countdownInterval)
-}
+    clearInterval(countdownInterval);
+};
 
 // Set a new question
 function setQuestion() {
     if (questions.length === 0) {
         hintField.textContent = "You have successfully completed the Demo 👏🏽👏🏽";
         stopCountDown();
-        hintContainer.style.background = "var(--green)"
+        hintContainer.style.background = "var(--green)";
         actualInpt.disabled = true;
         return;
     }
@@ -81,7 +80,6 @@ function setQuestion() {
     hintField.textContent = randomQuestion.hint;
     characterName = randomQuestion.name;
     actualInpt.maxLength = characterName.length;
-    actualInpt.focus = true;
 
     fields = "";
     inputFields.innerHTML = "";
@@ -99,6 +97,7 @@ function setQuestion() {
 
 function startQuiz() {
     score = 0;
+    timeRemaining = 120;
     document.getElementById('score').textContent = score;
     setQuestion();
 }
@@ -153,15 +152,17 @@ function restartQuiz() {
 
     inputFields.innerHTML = "";
     hintField.textContent = "Quiz restarted!";
+    hintContainer.style.background = "";
 
     // Start with a new question
     setQuestion();
 }
 
+// Stop the quiz
 function stopQuiz() {
     inputFields.classList.remove("success", "error");
     stopCountDown();
     actualInpt.disabled = true;
     hintField.textContent = "Quiz stopped!";
-    hintContainer.style.background = "var(--red)"
+    hintContainer.style.background = "var(--red)";
 }
