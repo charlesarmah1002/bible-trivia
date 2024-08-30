@@ -1,6 +1,7 @@
 const inputFields = document.querySelector('.inputFields'),
     actualInpt = document.getElementById('actualInput'),
-    hintField = document.getElementById('hint');
+    hintField = document.getElementById('hint'),
+    hintContainer = document.querySelector('.hint');
 
 const questions = [
     { name: "david", hint: "Promiscuous king whose son became the wisest and richest on earth" },
@@ -66,8 +67,9 @@ const stopCountDown = () => {
 // Set a new question
 function setQuestion() {
     if (questions.length === 0) {
-        hintField.textContent = "No more questions available!";
-        stopCountDown   ();
+        hintField.textContent = "You have successfully finished the Demo 👏🏽👏🏽";
+        stopCountDown();
+        hintContainer.style.background = "var(--green)"
         actualInpt.disabled = true;
         return;
     }
@@ -159,4 +161,5 @@ function stopQuiz() {
     stopCountDown();
     actualInpt.disabled = true;
     hintField.textContent = "Quiz stopped!";
+    hintContainer.style.background = "var(--red)"
 }

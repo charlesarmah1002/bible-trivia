@@ -4,7 +4,7 @@ I have always wanted to find a way to challenge people to learn more about the B
 
 Went across space 🚀 and time ⌛, then it hit me. I know a lot of Bible characters. Why don't I challenge everyone to a battle royale to see how good everyone is at.
 
-This is version 0.1.4.
+This is version 0.1.6.
 
 If you don't get it, don't worry about it, cause I do and don't get it too 🤔.
 

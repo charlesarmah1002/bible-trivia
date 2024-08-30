@@ -74,6 +74,10 @@
 
 }
 
+#container {
+    position: relative;
+}
+
 #container .inputFields input {
     width: 55px;
     height: 75px;
@@ -144,9 +148,12 @@ button#start {
 }
 
 #actualInput {
-    opacity: 0;
+    opacity: 0; 
     z-index: -999;
     position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     pointer-events: none;
 }
 
