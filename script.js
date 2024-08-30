@@ -53,6 +53,7 @@ const countDown = () => {
             clearInterval(countdownInterval);
             if (!inputFields.classList.contains("success")) {
                 inputFields.classList.add("error");
+                hintField.innerText = "Time up bruh"
             }
             actualInpt.disabled = true;
         }
