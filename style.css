@@ -189,7 +189,7 @@ button#start {
         display: grid;
         place-content: center;
         text-align: center;
-        color: var(--white);
+        color: black;
         padding: 25px;
     }
 
