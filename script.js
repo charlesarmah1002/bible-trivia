@@ -67,7 +67,7 @@ const stopCountDown = () => {
 // Set a new question
 function setQuestion() {
     if (questions.length === 0) {
-        hintField.textContent = "You have successfully finished the Demo 👏🏽👏🏽";
+        hintField.textContent = "You have successfully completed the Demo 👏🏽👏🏽";
         stopCountDown();
         hintContainer.style.background = "var(--green)"
         actualInpt.disabled = true;
