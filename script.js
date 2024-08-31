@@ -101,7 +101,7 @@ const questions = [
 
 let originalQuestions = [...questions]; // Make a copy of the original questions
 let answerVal = "";
-let timeRemaining = 120;
+let timeRemaining = 600;
 let timer = false;
 let characterName;
 let fields = "";
@@ -190,7 +190,10 @@ function setQuestion() {
 
 function startQuiz() {
     score = 0;
-    timeRemaining = 120;
+    timeRemaining = 600;
+
+    hintContainer.style.background = "";
+
     document.getElementById('score').textContent = score;
     setQuestion();
 }
@@ -238,13 +241,14 @@ function restartQuiz() {
 
     // Reset score and time
     score = 0;
-    timeRemaining = 120;
+    timeRemaining = 600;
 
     document.getElementById('score').textContent = score;
-    document.getElementById('timeLeft').textContent = '2:00'; // Reset timer display
+    // document.getElementById('timeLeft').textContent = '10:00'; // Reset timer display
 
     inputFields.innerHTML = "";
-    hintField.textContent = "Quiz restarted!";
+    // hintField.textContent = "Quiz restarted!";
+    window.alert("Quiz restarted")
     hintContainer.style.background = "";
 
     // Start with a new question
