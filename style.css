@@ -33,7 +33,7 @@
         font-size: 18px;
         display: grid;
         place-content: center;
-        height: 500px;
+        min-height: 500px;
         gap: 20px;
         position: relative;
         z-index: 3;
@@ -247,4 +247,24 @@ button#start {
         color: var(--green);
         background: var(--white);
     }
+
+    button {
+        width: 50px;
+        aspect-ratio: 1;
+        border-radius: 50% !important;
+    }
+
+    button span {
+        display: none;
+    }
+
+    button#showAnswer span {
+        display: block;
+    }
+}
+
+button#showAnswer {
+    border-radius: 5px !important;
+    width: 100% !important;
+    background: black;
 }

@@ -2,6 +2,7 @@ const inputFields = document.querySelector('.inputFields'),
     actualInpt = document.getElementById('actualInput'),
     hintField = document.getElementById('hint'),
     hintContainer = document.querySelector('.hint');
+
 const questions = [
     { name: "david", hint: "Promiscuous king whose son became the wisest and richest on earth" },
     { name: "moses", hint: "Led the Israelites out of Egypt and received the Ten Commandments.", scripture: "Exodus 3:10-12" },
@@ -101,10 +102,12 @@ const questions = [
 let originalQuestions = [...questions]; // Make a copy of the original questions
 let answerVal = "";
 let timeRemaining = 120;
+let timer = false;
 let characterName;
 let fields = "";
 let score = 0;
 let countdownInterval;
+let answer;
 
 // Disable certain keys and focus on the input
 document.onkeydown = (e) => {
@@ -121,6 +124,8 @@ const countDown = () => {
     const countdownDisplay = document.getElementById('timeLeft');
     actualInpt.disabled = false;
 
+    timer = true;
+
     clearInterval(countdownInterval); // Reset timer for each new question
 
     countdownInterval = setInterval(() => {
@@ -135,20 +140,25 @@ const countDown = () => {
             if (!inputFields.classList.contains("success")) {
                 inputFields.classList.add("error");
                 hintField.innerText = "Time up bruh";
+                timer = false;
             }
             actualInpt.disabled = true;
         }
     }, 1000);
+
+    return timeRemaining;
 };
 
 const stopCountDown = () => {
     clearInterval(countdownInterval);
+
+    timer = false;
 };
 
 // Set a new question
 function setQuestion() {
     if (questions.length === 0) {
-        hintField.textContent = "You have successfully completed the Demo 👏🏽👏🏽";
+        // hintField.textContent = "You have successfully completed the Demo 👏🏽👏🏽";
         stopCountDown();
         hintContainer.style.background = "var(--green)";
         actualInpt.disabled = true;
@@ -160,6 +170,7 @@ function setQuestion() {
 
     hintField.textContent = randomQuestion.hint;
     characterName = randomQuestion.name;
+    getAnswer(characterName);
     actualInpt.maxLength = characterName.length;
 
     fields = "";
@@ -174,6 +185,7 @@ function setQuestion() {
     inputFields.classList.remove("success", "error");
 
     countDown(); // Start the countdown for the new question
+    return answer;
 }
 
 function startQuiz() {
@@ -246,4 +258,19 @@ function stopQuiz() {
     actualInpt.disabled = true;
     hintField.textContent = "Quiz stopped!";
     hintContainer.style.background = "var(--red)";
+}
+
+let realAnswer;
+
+function getAnswer(answer) {
+    realAnswer = answer;
+}
+
+function showAnswer() {
+    if(!timer){
+        window.alert("Please Start The Quiz")
+    }else {
+        stopQuiz();
+        window.alert(realAnswer.toUpperCase());
+    }
 }
