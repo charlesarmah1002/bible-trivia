@@ -22,7 +22,3 @@ https://charlesarmah1002.github.io/bible-trivia
 
 
 ## Screenshots
-
-![Bible Character Trivia Screenshot](https://charlesarmah1002.github.io/bible-trivia/bible-trivia-screenshot.png)
-
-![Bible Character Trivia Screenshot Mobile](https://charlesarmah1002.github.io/bible-trivia/bible-trivia-screenshot%202.png)
